@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+<div id="container" class="bg-[#f0f4ff] min-h-screen flex items-center justify-center p-4">
+    <!-- Fixed shadow syntax & added text-center -->
+   
+        <div class="bg-white rounded-2xl p-12 text-center shadow-[0_4px_24px_#0000001a] max-w-md w-full">
+
+        <!-- Flex container for alignment -->
+        <div class="flex flex-col items-center justify-center space-y-3">
+            <h1 class="font-bold text-3xl text-[#1e1b4b] flex items-center gap-2">
+                <span class="text-2xl">🧠</span> Quick Quiz
+            </h1>
+            
+            <div class="text-gray-500 text-sm space-y-0.5">
+                <p>10 questions · General Knowledge</p>
+                <p>Pick the right answer and see your score!</p>
+            </div>
+            
+            <!-- Added margin-top, text color, and hover state to the button -->
+            <a id="btn" href="Quiz.html" class="cursor-pointer mt-4 font-bold pb-3 px-10  py-2.5 text-white rounded-lg bg-[#36459B] hover:bg-[#2e3b85] transition-colors">
+                Start Quiz
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+
+</html>

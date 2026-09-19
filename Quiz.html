@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#f0f4ff] min-h-screen flex items-center justify-center p-4 overflow-hidden">
+
+
+
+    <div id="container" class="max-w-6xl m-auto  flex items-center justify-center">
+        
+
+        <div class="bg-white rounded-2xl p-8 text-center shadow-[0_4px_24px_#0000001a] max-w-xl min-h-[460px] w-full">
+
+
+            <a href="index.html"
+                class="px-6 py-3 text-sm font-semibold text-gray-600 bg-gray-100 hover:bg-gray-200 transition rounded-lg">
+                ← Back
+            </a>
+
+            <div class="flex text-center justify-between mb-4">
+                <p class="text-[#888] text-xs font-semibold">Question 1 / 10</p>
+                <p id="score_btn" class="border rounded-full text-white bg-[#3b3b98] px-3 py-0.5">score </p>
+            </div>
+            <div class=" rounded-md py-0.5 overflow-hidden mb-5 bg-[#e0e0e0]"></div>
+
+            <h1 id="question" class="text-xl font-bold text-start mb-6"></h1>
+            <div id="options" class="flex flex-col gap-3 ">
+                <p
+                    class="option border-2 border-[#e0e0e0] rounded-md px-4 py-2 transition-all duration-200 bg-[#fafafa] text-start hover:border-blue-900 hover:bg-[#eef2f6] cursor-pointer">
+                    Berlin</p>
+                <p
+                    class="option border-2 border-[#e0e0e0] rounded-md px-4 py-2 bg-[#fafafa] text-start hover:border-blue-900 hover:bg-[#eef2f6] cursor-pointer">
+                    Madrid</p>
+                <p
+                    class="option border-2 border-[#e0e0e0] rounded-md px-4 py-2 bg-[#fafafa] text-start hover:border-blue-900 hover:bg-[#eef2f6] cursor-pointer">
+                    Paris</p>
+                <p
+                    class="option border-2 border-[#e0e0e0] rounded-md px-4 py-2 bg-[#fafafa] text-start hover:border-blue-900 hover:bg-[#eef2f6] cursor-pointer">
+                    Rome</p>
+            </div>
+            <p id="greet" class="mt-4 "></p>
+            <div class="pt-10">
+                <button id="nextBtn"
+                    class=" border rounded-lg cursor-pointer text-white font-bold px-20 py-3 w-full  flex justify-center items-center gap-1 bg-[#120A8F] hover:bg-[#32127A] ">Next
+                    <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+                        width="1em" height="1em">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-4-4m4 4l-4 4" />
+                    </svg>
+
+                </button>
+            </div>
+
+
+
+            <!-- <button id="btn" class="cursor-pointer mt-4 font-bold pb-3 px-10  py-2.5 text-white rounded-lg bg-[#36459B] hover:bg-[#2e3b85] transition-colors">
+                Start Quiz
+            </button> -->
+        </div>
+        <div id="result" class="hidden text-center">
+            <h2 class="text-2xl font-bold mb-4">Quiz Complete!</h2>
+
+            <p id="scoreText" class="mb-4"></p>
+
+            <button id="restartBtn" class="bg-blue-900 cursor-pointer text-white px-5 py-2 rounded-md">
+                Restart Quiz
+            </button>
+        </div>
+    </div>
+
+   
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
