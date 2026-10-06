@@ -24,14 +24,16 @@
             </a>
 
             <div class="flex text-center justify-between mb-4">
-                <p class="text-[#888] text-xs font-semibold">Question 1 / 10</p>
+                <p id="questionNO" class="text-[#888] text-xs font-semibold">Question 1 / 10</p>
                 <p id="score_btn" class="border rounded-full text-white bg-[#3b3b98] px-3 py-0.5">score </p>
             </div>
-            <div id="progressBar" class=" rounded-md py-0.5 overflow-hidden mb-5 bg-[#e0e0e0]"></div>
+            <div id="progressBar" class=" rounded-md py-0.5 overflow-hidden mb-5  bg-[#e0e0e0]">
+                <div class="progress-fill " id="progress-fill" style="width: 60%"></div>
+            </div>
 
             <h1 id="question" class="text-xl font-bold text-start mb-6"></h1>
             <div id="options" class="flex flex-col gap-3 ">
-                <p
+                <!-- <p
                     class="option border-2 border-[#e0e0e0] rounded-md px-4 py-2 transition-all duration-200 bg-[#fafafa] text-start hover:border-blue-900 hover:bg-[#eef2f6] cursor-pointer">
                     Berlin</p>
                 <p
@@ -42,7 +44,7 @@
                     Paris</p>
                 <p
                     class="option border-2 border-[#e0e0e0] rounded-md px-4 py-2 bg-[#fafafa] text-start hover:border-blue-900 hover:bg-[#eef2f6] cursor-pointer">
-                    Rome</p>
+                    Rome</p> -->
             </div>
             <p id="greet" class="mt-4 "></p>
             <div class="pt-10">

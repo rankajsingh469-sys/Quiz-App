@@ -81,6 +81,8 @@ const scoreText = document.getElementById("scoreText");
 const restartBtn = document.getElementById("restartBtn");
 const greet = document.querySelector("#greet");
 const progressBar = document.querySelector("#progressBar");
+const progressFill = document.querySelector("#progress-fill");
+const questionNO = document.querySelector("#questionNO");
 // options.forEach(function (option) {
 //   option.addEventListener('click', function () {
 //     // console.log(option.textContent);
@@ -91,6 +93,8 @@ let currentQuestion = 0;
 
 function showQuestion() {
   const current = questions[currentQuestion];
+  questionNO.textContent = "";
+  questionNO.textContent =`Question ${currentQuestion+ 1} / 10` 
   answered = false;
 
   question.textContent = current.question;
@@ -156,10 +160,14 @@ nextBtn.addEventListener('click', function () {
     return;
   }
 
-  
+
   if (currentQuestion < questions.length - 1) {
     currentQuestion++
     showQuestion()
+    const progress = ((currentQuestion + 1) / questions.length) * 100;
+    
+    progressBar.classList.add("bg-blue-700")
+    progressBar.style.width = `${progress}%`;
 
   } else {
     showResult()
@@ -184,5 +192,7 @@ function showResult() {
 
 
 showQuestion();
+
+
 
 
