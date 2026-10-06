@@ -80,6 +80,7 @@ const result = document.getElementById("result");
 const scoreText = document.getElementById("scoreText");
 const restartBtn = document.getElementById("restartBtn");
 const greet = document.querySelector("#greet");
+const progressBar = document.querySelector("#progressBar");
 // options.forEach(function (option) {
 //   option.addEventListener('click', function () {
 //     // console.log(option.textContent);
@@ -90,6 +91,7 @@ let currentQuestion = 0;
 
 function showQuestion() {
   const current = questions[currentQuestion];
+  answered = false;
 
   question.textContent = current.question;
   optionsContainer.innerHTML = "";
@@ -108,12 +110,14 @@ function showQuestion() {
 
 
 
+
     })
     optionElement.addEventListener("click", function () {
-
+      answered = true;
       optionsContainer.querySelectorAll("p").forEach(function (optionElement) {
         optionElement.style.pointerEvents = "none";
       });
+
 
       if (optionElement.textContent == current.answer) {
         score++;
@@ -132,33 +136,47 @@ function showQuestion() {
       } else {
         greet.textContent = "❌ Incorrect!";
       }
+
+
+
+
     });
 
     optionsContainer.appendChild(optionElement);
+
   });
 }
 
+
 nextBtn.addEventListener('click', function () {
+  greet.textContent = ""
+  if (!answered) {
+    greet.classList.add("text-red-500")
+    greet.textContent = "Please answer the question first!";
+    return;
+  }
+
+  
   if (currentQuestion < questions.length - 1) {
     currentQuestion++
     showQuestion()
 
-  }else{
+  } else {
     showResult()
   }
 })
 
-restartBtn.addEventListener('click',function() {
+restartBtn.addEventListener('click', function () {
   currentQuestion = 0;
   score = 0;
   result.classList.add("hidden");
   question.parentElement.classList.remove("hidden")
   showQuestion()
-  
+
 
 })
 
-function showResult(){
+function showResult() {
   question.parentElement.classList.add("hidden");
   result.classList.remove("hidden");
   scoreText.textContent = `your score: ${score}/${questions.length}`
@@ -166,3 +184,5 @@ function showResult(){
 
 
 showQuestion();
+
+
